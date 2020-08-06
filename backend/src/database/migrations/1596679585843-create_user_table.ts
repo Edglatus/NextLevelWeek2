@@ -9,10 +9,9 @@ export class createUserTable1596679585843 implements MigrationInterface {
             columns: [
                 {
                     name: 'id',
-                    type: 'uuid',
-                    generationStrategy: 'uuid',
+                    type: 'integer',
+                    generationStrategy: 'increment',
                     isPrimary: true,
-                    default: 'uuid_generate_v4()'
                 },
                 {
                     name: 'name',
