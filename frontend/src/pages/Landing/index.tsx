@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+
+import api from '../../services/api';
 
 // Images
 import imgLogo from '../../assets/images/logo.svg';
@@ -13,12 +15,20 @@ import iconHeart from '../../assets/images/icons/heart.svg';
 import { LandingPage, LandingHeader, ButtonContainer } from './styles';
 
 export default function Landing() {
+    const [connections, setConnections] = useState(0);
+
+    useEffect(() => {
+        api.get('/connections').then(response => {
+            setConnections(response.data.total);
+        });
+    }, []);
+
     return (
         <LandingPage className="page-landing">
             <div id="page-landing-content" className="container">
                 <LandingHeader className="logo-container">
                     <img src={imgLogo} alt="Proffy!"/>
-                    <h2>This is a goddamn description</h2>
+                    <h2>Teach, or be taught.</h2>
                 </LandingHeader>
 
                 <img src={imgLanding} alt="Proffy!" className="hero-image"/>
@@ -35,7 +45,7 @@ export default function Landing() {
                 </ButtonContainer>
 
                 <span className="total-connections">
-                    200 people have already been connected!
+                    {connections} bonds have already been made!
                     <img src={iconHeart} alt="heart" className="heart"/>
                 </span>
             </div>

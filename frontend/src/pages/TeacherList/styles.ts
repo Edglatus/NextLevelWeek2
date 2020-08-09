@@ -19,6 +19,18 @@ export const ListPage = styled.div`
             margin: 0 auto;
         }
     }
+
+    @media (min-width: 1000px) {
+
+        main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(36rem, 1fr));
+            column-gap: 16px;
+
+            max-width: 1080px;
+
+        }
+    }
 `;
 
 export const ListForm = styled.form`
@@ -28,53 +40,54 @@ export const ListForm = styled.form`
         color: var(--color-text-in-primary);
     }
 
-    div {
-        position: relative;
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: end;
 
-        & + div {
-            margin-top: 1.4rem;
+        width: 100%;
+        height: 5.6rem;
+        margin-top: 2.8rem;
+
+        border: 1px solid var(--color-in-white);
+        border-radius: 0.8rem;
+        background: var(--color-secondary);
+        cursor: pointer;
+
+        font: 700 1.6rem Archivo;
+        color: var(--color-button-text);
+        text-decoration: none;
+
+        &:hover {
+            background: var(--color-secondary-dark);
         }
-
-        label {
-            font-size: 1.4rem;
-        }
-
-        input {
-            width: 100%;
-            height: 5.6rem;
-            margin-top: 0.8rem;
-
-            border-radius: 0.8rem;
-
-            background: var(--color-input-background);
-            border: 1px solid var(--color-line-in-white);
-            outline: 0;
-            padding: 0 1.6rem;
-            font: 1.6rem Archivo;
-        }
-
-        &:focus-within::after {
-            width: calc(100% - 2rem);
-            height: 2px;
-            content: '';
-            background: var(--color-primary-light);
-            position: absolute;
-            left: 1rem;
-            right: 1rem;
-            bottom: -0rem;
-        }
+        transition: background-color 0.2s;
     }
 
     @media (min-width: 700px) {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        align-self: center;
+        grid-template-columns: repeat(4, 1fr);
         column-gap: 16px;
         position: absolute;
-        bottom: -25%;
+        bottom: -2.5rem;
+
+        width: 100%;
+        max-width: 1080px;
 
         div + div {
             margin-top: 0;
         }
+
+        button {
+            margin-top: 0rem;
+        }
+
+    }
+
+    @media (min-width: 1000px) {
+        width: 120%;
     }
 `;
 

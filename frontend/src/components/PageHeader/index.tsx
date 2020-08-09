@@ -25,6 +25,7 @@ const PageHeader: React.FC<PageHeaderProps> = (props) => {
 
             <section className="header-content">
                 <strong>{props.title}</strong>
+                {props.subtitle && <p>{props.subtitle}</p>}
 
                 {props.children}
             </section>

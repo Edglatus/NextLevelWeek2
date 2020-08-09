@@ -10,6 +10,7 @@ export default class ClassController
             const classes = await FilterClassService(request.query)
             return response.json(classes);
         } catch (err) {
+            console.log(err);
             return response.status(400).json({error: err.message});
         }
     }
@@ -21,6 +22,8 @@ export default class ClassController
             await CreateUserService(request.body);
             return response.status(201).send();
         } catch (error) {
+
+            console.log(error);
             return response.status(400).json({
                 error: 'Unexpected Error',
             });

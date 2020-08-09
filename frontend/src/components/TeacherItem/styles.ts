@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const ListItem = styled.article`
+    max-width: 500px;
+
     margin-top: 2.4rem;
 
     border: 1px solid var(--color-line-in-white);
@@ -68,7 +70,7 @@ export const ListItem = styled.article`
             color: var(--color-primary-dark);
         }
 
-        button {
+        a {
             display: flex;
             align-items: center;
             justify-content: space-evenly;
@@ -83,6 +85,7 @@ export const ListItem = styled.article`
 
             font: 700 1.4rem Archivo;
             color: var(--color-button-text);
+            text-decoration: none;
 
             cursor: pointer;
 
@@ -95,7 +98,7 @@ export const ListItem = styled.article`
 
     }
 
-    @media (min-width: 700px)
+    @media (min-width: 700px) and (max-width: 900px)
     {
         header {
             padding: 3.2rem;
@@ -113,7 +116,7 @@ export const ListItem = styled.article`
                 margin-left: 1.6rem;
             }
 
-            button {
+            a {
                 justify-content: center;
                 width: 24.5rem;
                 font-size: 1.6rem;

@@ -42,6 +42,16 @@ export const Header = styled.header`
             line-height: 4.2rem;
             color: var(--color-title-in-primary);
         }
+
+        p {
+            margin-top: 2.4rem;
+
+            max-width: 30rem;
+
+            font-size: 1.6rem;
+            line-height: 2.6rem;
+            color: var(--color-text-in-primary);
+        }
     }
 
 
@@ -63,6 +73,10 @@ export const Header = styled.header`
             max-width: 740px;
             margin: 0 auto;
             padding-bottom: 48px;
+
+            p {
+                max-width: 80rem;
+            }
         }
     }
 `;

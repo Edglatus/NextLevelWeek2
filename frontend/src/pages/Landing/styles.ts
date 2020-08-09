@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const LandingPage = styled.div`
     display: flex;
+    justify-content: space-around;
     margin: auto;
     padding: 1rem 0;
 
@@ -15,7 +16,8 @@ export const LandingPage = styled.div`
         display: flex;
         margin: auto;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
+        width: 100%;
 
         img {
             margin-left: 0.8rem;
