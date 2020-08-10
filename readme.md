@@ -1,3 +1,5 @@
+> Source: https://www.notion.so/Vers-o-2-0-Proffy-eefca1b981694cd0a895613bc6235970
+
 # Autenticação de usuários
 
 A primeira nova funcionalidade da sua aplicação será a autenticação de usuários nas aplicações Web e Mobile. Para isso, nós primeiramente devemos criar, no nosso servidor, a funcionalidade para o usuário se cadastrar, inserindo seu e-mail e senha.
